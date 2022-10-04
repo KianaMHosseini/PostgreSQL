@@ -54,16 +54,16 @@ create table authorname(
   foreign key (bookname) references book(bname)
   )--Query &7
 
-/*insert into book (bid,stoke,edition,bname,btype)values(193,5,7,'kouri','novel'),
+insert into book (bid,stoke,edition,bname,btype)values(193,5,7,'kouri','novel'),
 (224,3,7,'binavayan','novel'),(331,1,6,'barfak','romance'),
-(900,3,4,'deracula','horror'),(678,4,1,'rebecca','romance')*/
+(900,3,4,'deracula','horror'),(678,4,1,'rebecca','romance')
 
 select * from book--Query &8
 
-/*insert into librarymember (mid,code,Lname,Lfamily)values
+insert into librarymember (mid,code,Lname,Lfamily)values
 (22450233,2345246735,'raha','zakeri'),(22453781,7865309981,'maryam','ehsani'),
 (22889734,2976651908,'ahmad','hosseini'),(22979602,9676237781,'mehdi','edalati'),
-(22674534,3356869278,'arezo','hasani')*/
+(22674534,3356869278,'arezo','hasani')
 
 select * from librarymember--Query &9
 
@@ -74,15 +74,15 @@ select * from librarymember--Query &9
 select * from address
 --Query &10
 
-/*insert into borrow (bdate,bookid,mid,borrownum) values ('azar',193,22450233,2),
+insert into borrow (bdate,bookid,mid,borrownum) values ('azar',193,22450233,2),
 ('mordad',224,22453781,1),('azar',331,22889734,0),('tir',900,22979602,2),
-('mordad',678,22674534,3)*/
+('mordad',678,22674534,3)
 
 select * from borrow--Query &11
 
-/*insert into return (rdate,bookid,mid) values ('bahman',193,22450233),
+insert into return (rdate,bookid,mid) values ('bahman',193,22450233),
 ('shahrivar',224,22453781),('azar',331,22889734),('azar',900,22979602),
-('mehr',678,22674534)*/
+('mehr',678,22674534)
 
 
 select * from return
@@ -91,16 +91,16 @@ select * from return
 
 --Query &12
 
-/*insert into authorname(bookname,Authorname)values('kouri','jose'),
-('binavayan','victor'),('barfak','don'),('deracula','beram'),('rebecca','dafne')*/
+insert into authorname(bookname,Authorname)values('kouri','jose'),
+('binavayan','victor'),('barfak','don'),('deracula','beram'),('rebecca','dafne')
 
 select * from authorname--Query &13
 
-/*select bname,stoke from book*/
+select bname,stoke from book
 
-/*select * from return where rdate like 'a%'*/
+select * from return where rdate like 'a%'
 
-/*select count(*)from librarymember where Lfamily like 'e%'*/
+select count(*)from librarymember where Lfamily like 'e%'
 
 /*author of books and its edition
 select Authorname,edition from authorname join book on bookname=bname*/
@@ -152,7 +152,7 @@ $$language sql;
 
 select * from booktbl(193)*/
 
-/*
+
 create or replace function numnew(a int ) returns numeric as $$
 declare 
 counter int :=0;
@@ -164,7 +164,9 @@ while (counter<5) loop
       counter:=counter+1;
 end loop;
 return num;
-end;$$ language plpgsql;*/--Query &15
+end;$$ language plpgsql;
+
+--Query &15
 
 /*select numnew (5)*/--Query &16
 
